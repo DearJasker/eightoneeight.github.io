@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2021-03-22T12:56:14.361Z</updated>
+  <updated>2021-03-22T13:06:29.279Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿巴阿巴亚</title>
+    <link href="/2021/03/22/Ababa/"/>
+    <id>/2021/03/22/Ababa/</id>
+    <published>2021-03-22T14:16:01.000Z</published>
+    <updated>2021-03-22T13:06:29.279Z</updated>
+    
+    <summary type="html">
+    
+      这里的一些信息
+    
+    </summary>
+    
+      <category term="学习" scheme="/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>欢迎来到我的博客 | 信息</title>
