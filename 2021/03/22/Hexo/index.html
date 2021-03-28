@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
   
-  <title itemprop="name">donate | EightOneEight&#39;s blog</title>
+  <title itemprop="name">Hexo+GitHub+Netlify构建使用Hexo-Theme-Sakura主题的静态博客（完全免费） | EightOneEight&#39;s blog</title>
   
     <link rel="shortcut icon" href="https://i.loli.net/2021/03/20/LtDwY8SbUnAPHN9.jpg">
   
@@ -318,107 +318,160 @@
   </div>
 </header>
 
-      <link rel="stylesheet" href="/css/donate.css">
-<div class="pattern-center-blank">
-</div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/donate.jpg" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/donate.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="entry-title">谢谢饲主了喵~</h1>
-  </header>
-</div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+
 <div id="content" class="site-content">
-  <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-  如果喜欢我的博客，可以考虑资助一下哦~非常感激！
-    <div id="root">
-      <div class="root">
-        <a href="https://github.com/Kaiyuan/donate-page" target="_blank" class="pos-f tr3" title="Github"><span id="github"></span></a>
-        <ul id="donateBox" class="list pos-f tr3">
-          <!-- <li id="BTC" data-footnote="Copy addres and show QRCod"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li> -->
-          <li id="PayPal"><a href="" target="_blank">PayPal</a></li>
-          <li id="AliPay">AliPay</li>
-          <li id="WeChat">WeChat</li>
-        </ul>
-        <div id="DonateText" class="tr3">Donate</div>
-        <div id="QRBox" class="pos-f left-100">
-          <div id="MainBox"></div>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">Hexo+GitHub+Netlify构建使用Hexo-Theme-Sakura主题的静态博客（完全免费）</h1>
+            <p class="entry-census">eightoneeight&nbsp;·&nbsp;2021-3-22&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>网络上的Hexo教程非常多，但是我创作这一个教程的目的是针对想要搭建Sakura主题的博主提供一个完善的从头到尾搭建、优化到发布的全过程的详细教程</p>
+<h1 id="2-准备"><a href="#2-准备" class="headerlink" title="2 准备"></a>2 准备</h1><h2 id="2-1-Why-Hexo-GitHub-Netlify"><a href="#2-1-Why-Hexo-GitHub-Netlify" class="headerlink" title="2.1 Why Hexo/GitHub/Netlify?"></a>2.1 Why Hexo/GitHub/Netlify?</h2><p>Hexo是一个基于 Node.js 的静态博客框架，只需要很简单的配置就可以通过庞大的社区、大量的主题和插件等进行写作；GitHub 是免费的，也是大家最常使用的；Netlify 是因为相比于 GitHub Pages 它访问速度更快，而且也不需要付费。</p>
+<h2 id="2-2-Node-js-安装"><a href="#2-2-Node-js-安装" class="headerlink" title="2.2 Node.js 安装"></a>2.2 Node.js 安装</h2><p>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">这里（英文站）</a>或者<a href="http://nodejs.cn/" target="_blank" rel="noopener">中文站（推荐）</a>下载Node.js安装，建议下载大版本号为12的Node.js更方便，我这里用的是<a href="https://npm.taobao.org/mirrors/node/v12.21.0/" target="_blank" rel="noopener">12.21.0</a><strong>（补充：新的资料表示低于14版本就可以正常使用了，高于14版本也可以正常使用但是会有一些无关紧要的输出）</strong>，大家可以根据自己的操作系统进行下载。</p>
+<p>至于安装相信不用我多说了，也不用配置环境变量，检查安装只需要打开cmd输入：</p>
+<pre><code class="cmd"> npm version
+</code></pre>
+<p>就可以了，我这边会显示这个：，你们应该也大同小异</p>
+<pre><code class="cmd">{
+  npm: &#39;7.5.4&#39;,
+  node: &#39;12.21.0&#39;,
+  v8: &#39;7.8.279.23-node.45&#39;,
+  uv: &#39;1.40.0&#39;,
+  zlib: &#39;1.2.11&#39;,
+  brotli: &#39;1.0.9&#39;,
+  ares: &#39;1.16.1&#39;,
+  modules: &#39;72&#39;,
+  nghttp2: &#39;1.41.0&#39;,
+  napi: &#39;7&#39;,
+  llhttp: &#39;2.1.3&#39;,
+  http_parser: &#39;2.9.4&#39;,
+  openssl: &#39;1.1.1j&#39;,
+  cldr: &#39;37.0&#39;,
+  icu: &#39;67.1&#39;,
+  tz: &#39;2019c&#39;,
+  unicode: &#39;13.0&#39;
+}
+</code></pre>
+<h2 id="2-3-Git-安装"><a href="#2-3-Git-安装" class="headerlink" title="2.3 Git 安装"></a>2.3 Git 安装</h2><p>前往<a href="https://git-scm.com/" target="_blank" rel="noopener">这里</a>下载并安装 Git，什么都不需要更改，然后输入</p>
+<pre><code class="cmd"> git version
+</code></pre>
+<p>应该会显示</p>
+<pre><code class="cmd"> git version 2.30.1.windows.1
+</code></pre>
+<p>会类似文本说明安装成功。</p>
+<h2 id="2-4-安装-Hexo"><a href="#2-4-安装-Hexo" class="headerlink" title="2.4 安装 Hexo"></a>2.4 安装 Hexo</h2><p>本文章提供两种安装方式（分别为 Npm 和 Yarn），建议新手使用 Npm 较为熟练的使用 Yarn 。</p>
+<h3 id="2-4-1-Npm"><a href="#2-4-1-Npm" class="headerlink" title="2.4.1 Npm"></a>2.4.1 Npm</h3><p>在终端中输入：</p>
+<pre><code class="cmd"> npm install -g hexo-cli 
+</code></pre>
+<p>然后等待即可。</p>
+<h3 id="2-4-2-Yarn"><a href="#2-4-2-Yarn" class="headerlink" title="2.4.2 Yarn"></a>2.4.2 Yarn</h3><h4 id="2-4-2-1-安装-Yarn"><a href="#2-4-2-1-安装-Yarn" class="headerlink" title="2.4.2.1 安装 Yarn"></a>2.4.2.1 安装 Yarn</h4><p>前往<a href="https://classic.yarnpkg.com/latest.msi" target="_blank" rel="noopener">这个网页</a>下载 Windows 安装程序进行安装是最简单的方法。</p>
+<p>完成后输入</p>
+<pre><code class="cmd"> yarn version
+</code></pre>
+<p>输出这个说明成功：</p>
+<pre><code class="cmd"> yarn version v1.22.5
+</code></pre>
+<h4 id="2-4-2-2-安装-Hexo"><a href="#2-4-2-2-安装-Hexo" class="headerlink" title="2.4.2.2 安装 Hexo"></a>2.4.2.2 安装 Hexo</h4><p>安装 Yarn 之后输入</p>
+<pre><code class="cmd"> yarn global add hexo-cli
+</code></pre>
+<p>即可安装 Hexo</p>
+<h1 id="3-基本"><a href="#3-基本" class="headerlink" title="3 基本"></a>3 基本</h1><h2 id="3-1-初始化"><a href="#3-1-初始化" class="headerlink" title="3.1 初始化"></a>3.1 初始化</h2><p>用 cd 命令进入一个事先准备好的目录（不会自行搜索）</p>
+<p>输入：</p>
+<pre><code class="cmd"> hexo init
+</code></pre>
+
         </div>
-        <!-- Bitcoin 账号 -->
-        <!-- <input id="btc-key" type="text" value="14JkMR68n4PBASB3TgvpjtaPTbfffSwFbW" readonly="readonly"> -->
-      </div>
-    </div>
-    <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-    <footer class="post-footer">
-      <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-      <div class="post-tags">
-      </div>
-      <div class="post-share">
-        <div class="social-share sharehidden share-component"></div>
-        <i class="iconfont show-share icon-forward"></i>
-      </div>
-    </footer><!-- .entry-footer -->
-  </article>
-  <section class="author-profile">
-    <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-      <a href="/about/" class="profile gravatar"><img src="https://i.loli.net/2021/03/20/LtDwY8SbUnAPHN9.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
-      <div class="meta">
-        <span class="title">Author</span>
-        <h3 itemprop="name">
-        <a href="https://www.worldeightclient.top" itemprop="url" rel="author">hojun</a>
-        </h3>
-      </div>
-    </div>
-    <hr>
-    <p><i class="iconfont icon-write"></i>愚蠢的人总是为昨天悔恨，为明天祈祷，可惜的是少了今天的努力。</p>
-  </section>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre full previous">
+          
+            <a href="/2050/01/01/Welcome/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                欢迎来到我的博客 | 信息</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "3Wz2Ql3H9XKnSXpmsyfUKeoK-gzGzoHsz",
+        appKey: "xGvShkhpxP5UKwq1aR5oplef",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="www.worldeightclient.top" class="profile gravatar"><img src="https://i.loli.net/2021/03/20/LtDwY8SbUnAPHN9.jpg" itemprop="image" alt="eightoneeight" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.worldeightclient.top" itemprop="url" rel="author">eightoneeight</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>你猜哟</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script> -->
-  <script>
-    jQuery(document).ready(function() {
-    var QRBox = $('#QRBox');
-    var MainBox = $('#MainBox');
-    var BTCQR = '/images/donate/BTCQR.png'; // 二维码路径
-    var AliPayQR  = '/img/custom/donate/AliPayQR.jpg';
-    var WeChanQR  = '/img/custom/donate/WeChanSQ.jpg';
 
-    function showQR(QR) {
-      if (QR) {
-        MainBox.css('background-image','url('+QR+')');
-      }
-      $('#DonateText,#donateBox,#github').addClass('blur');
-      QRBox.fadeIn(300,function(argument) {
-        MainBox.addClass('showQR');
-      });
-    }
 
-    $('#donateBox>li').click(function(event) {
-      var thisID  = $(this).attr('id');
-      if (thisID === 'BTC') {
-        new ClipboardJS('#BTCBn');
-        new ClipboardJS('.btnsss');
-        showQR(BTCQR);
-      } else if (thisID === 'AliPay') {
-        showQR(AliPayQR);
-      } else if (thisID === 'WeChat') {
-        showQR(WeChanQR);
-      }
-    });
-
-    MainBox.click(function(event) {
-      MainBox.removeClass('showQR').addClass('hideQR');
-      setTimeout (function(a) {
-        QRBox.fadeOut(300,function(argument) {
-          MainBox.removeClass('hideQR');
-        });
-        $('#DonateText,#donateBox,#github').removeClass('blur');
-      },600);
-
-    });
-  });
-  </script>
 
     </div>    
     <div class="ins-search">
